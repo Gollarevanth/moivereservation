@@ -1,41 +1,119 @@
-# moivereservation
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustainable Shopping Assistant</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Movie Ticket Booking</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f2027;  /* fallback for old browsers */
+      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      background-color: #1e1e2f;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background-color: #ff4b2b;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #ff3a1a;
+    }
+
+    .success {
+      text-align: center;
+      margin-top: 20px;
+      color: #00e676;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Sustainable Shopping Assistant</h1>
-        <p>Find eco-friendly alternatives for your everyday products!</p>
-    </header>
+  <div class="container">
+    <h2>🎟 Movie Ticket Booking</h2>
+    <form id="bookingForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
 
-    <main>
-        <div class="search-container">
-            <label for="product-search">Search for a product:</label>
-            <input type="text" id="product-search" placeholder="e.g., plastic bottle">
-            <button id="search-button">Search</button>
-        </div>
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
 
-        <div id="recommendation-section" class="hidden">
-            <h2>Eco-Friendly Alternatives</h2>
-            <div id="recommendations"></div>
-        </div>
+      <label for="movie">Select Movie:</label>
+      <select id="movie" name="movie" required>
+        <option value="">-- Select a Movie --</option>
+        <option value="The Matrix">The Matrix</option>
+        <option value="Oppenheimer">Oppenheimer</option>
+        <option value="Inside Out 2">Inside Out 2</option>
+        <option value="Spider-Man: No Way Home">Spider-Man: No Way Home</option>
+      </select>
 
-        <div id="eco-impact-section" class="hidden">
-            <h3>Your Eco Impact</h3>
-            <p>Total CO2 savings: <span id="eco-impact-value">0.0</span> kg</p>
-        </div>
-    </main>
+      <label for="date">Show Date:</label>
+      <input type="date" id="date" name="date" required>
 
-    <footer>
-        <p>&copy; 2025 Sustainable Shopping Assistant</p>
-    </footer>
+      <label for="time">Show Time:</label>
+      <select id="time" name="time" required>
+        <option value="">-- Select Time --</option>
+        <option value="10:00 AM">10:00 AM</option>
+        <option value="1:00 PM">1:00 PM</option>
+        <option value="4:00 PM">4:00 PM</option>
+        <option value="7:00 PM">7:00 PM</option>
+        <option value="10:00 PM">10:00 PM</option>
+      </select>
 
-    <script src="app.js"></script>
+      <label for="tickets">Number of Tickets:</label>
+      <input type="number" id="tickets" name="tickets" min="1" max="10" required>
+
+      <button type="submit">Book Now</button>
+      <div class="success" id="successMessage"></div>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("bookingForm");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      successMessage.textContent = "🎉 Your tickets have been booked successfully!";
+      form.reset();
+    });
+  </script>
 </body>
 </html>
