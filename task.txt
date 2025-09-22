@@ -1,0 +1,15 @@
+The Movie Reservation Form allows users to easily book tickets for their favorite movies at their preferred theater and showtime. This user-friendly form collects essential booking information such as the movie title, show date and time, number of tickets, seat preferences, and personal details. It provides a seamless experience for selecting available seats, confirming prices, and completing reservations in just a few steps.
+
+🔍 Key Features:
+
+Select movie title and cinema location
+
+Choose date and showtime
+
+Pick number of tickets and seat type (e.g., regular, VIP)
+
+View real-time seat availability
+
+Input personal details (name, contact info, etc.)
+
+Confirm and reserve with optional payment integration
