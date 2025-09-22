@@ -1,0 +1,7 @@
+This code creates a simple and visually appealing Movie Ticket Booking webpage using HTML, CSS, and JavaScript.
+The HTML structure contains a form where users can input their name, email, movie selection, show date and time, and the number of tickets they want to book.
+The CSS styles the form to give it a modern, dark-themed design with smooth input fields and a bright, eye-catching "Book Now" button.
+When the form is submitted, JavaScript prevents the page from reloading, displays a success message, and clears the form fields.
+Although it looks fully functional, the form currently does not connect to a real backend or database—it’s meant as a front-end demonstration.
+This makes it perfect for learning, prototyping, or as a base to build a complete ticket reservation system.
+
