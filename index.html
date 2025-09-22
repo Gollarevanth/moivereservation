@@ -1,0 +1,41 @@
+# moivereservation
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Shopping Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Sustainable Shopping Assistant</h1>
+        <p>Find eco-friendly alternatives for your everyday products!</p>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <label for="product-search">Search for a product:</label>
+            <input type="text" id="product-search" placeholder="e.g., plastic bottle">
+            <button id="search-button">Search</button>
+        </div>
+
+        <div id="recommendation-section" class="hidden">
+            <h2>Eco-Friendly Alternatives</h2>
+            <div id="recommendations"></div>
+        </div>
+
+        <div id="eco-impact-section" class="hidden">
+            <h3>Your Eco Impact</h3>
+            <p>Total CO2 savings: <span id="eco-impact-value">0.0</span> kg</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sustainable Shopping Assistant</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
